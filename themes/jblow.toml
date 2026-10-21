@@ -1,0 +1,152 @@
+# j_blow — Helix port of the VS Code "j_blow" theme
+# # Helix doesn't support alpha in hex colors, so translucent VS Code colors
+# # have been pre-blended onto the editor background (#031c1f).
+#
+# # ---------------------------------------------------------------- syntax
+ "comment"                = "comment"
+
+ "keyword"                = "keyword"
+ "keyword.control"        = "keyword"
+ "keyword.operator"       = "keyword"
+ "keyword.function"       = "type_light"
+ "keyword.storage"        = "teal_light"
+ "keyword.storage.type"   = "teal_light"
+ "keyword.storage.modifier" = "teal_light"
+ "keyword.directive"      = "keyword"
+
+ "operator"               = "fg"
+ "punctuation"            = "fg"
+ "punctuation.delimiter"  = "fg"
+ "punctuation.bracket"    = "fg"
+ "punctuation.special"    = "fg"
+
+ "string"                 = "string"
+ "string.regexp"          = "constant"
+ "string.special"         = "constant"
+
+ "constant"               = "constant"
+ "constant.builtin"       = "constant"
+ "constant.character"     = "string"
+ "constant.character.escape" = "constant"
+ "constant.numeric"       = "type_light"
+
+ "type"                   = "type_light"
+ "type.builtin"           = "teal_light"
+ "type.enum.variant"      = "constant"
+ "constructor"            = "teal_light"
+
+ "function"               = "fg"
+ "function.method"        = "fg"
+ "function.builtin"       = "type_light"
+ "function.macro"         = "teal_light"
+ "function.special"       = "teal_light"
+
+ "variable"               = "fg"
+ "variable.parameter"     = "type_light"
+ "variable.builtin"       = "type_light"
+ "variable.other.member"  = "type_light"
+
+ "namespace"              = "type_light"
+ "label"                  = "teal_light"
+ "special"                = "teal_light"
+ "tag"                    = "teal_light"
+ "attribute"              = "type_light"
+
+ # ---------------------------------------------------------------- markup
+ "markup.heading"         = { fg = "teal_light", modifiers = ["bold"] }
+ "markup.bold"            = { modifiers = ["bold"] }
+ "markup.italic"          = { modifiers = ["italic"] }
+ "markup.strikethrough"   = { modifiers = ["crossed_out"] }
+ "markup.link.url"        = { fg = "string", modifiers = ["underlined"] }
+ "markup.link.text"       = "type_light"
+ "markup.list"            = "gold"
+ "markup.quote"           = "comment"
+ "markup.raw"             = "string"
+
+ # ---------------------------------------------------------------- diff
+ "diff.plus"              = "comment"
+ "diff.minus"             = "red_soft"
+ "diff.delta"             = "gold"
+
+ # ---------------------------------------------------------------- ui
+ "ui.background"          = { bg = "bg" }
+ "ui.text"                = "fg"
+ "ui.text.focus"          = "white"
+ "ui.text.inactive"       = "linenr"
+ "ui.text.info"           = "gray"
+
+ "ui.cursor"              = { fg = "bg", bg = "cursor" }
+ "ui.cursor.primary"      = { fg = "bg", bg = "cursor" }
+ "ui.cursor.match"        = { bg = "match_hl" }
+
+ "ui.selection"           = { fg = "sel_fg", bg = "sel_bg" }
+ "ui.selection.primary"   = { fg = "sel_fg", bg = "sel_bg" }
+ "ui.highlight"           = { bg = "match_hl" }
+
+ "ui.linenr"              = "linenr"
+ "ui.linenr.selected"     = "gold"
+
+ "ui.statusline"          = { fg = "black", bg = "gold" }
+ "ui.statusline.inactive" = { fg = "gray", bg = "bg_alt" }
+ "ui.statusline.normal"   = { fg = "black", bg = "gold", modifiers = ["bold"] }
+ "ui.statusline.insert"   = { fg = "black", bg = "cursor", modifiers = ["bold"] }
+ "ui.statusline.select"   = { fg = "white", bg = "sel_bg", modifiers = ["bold"] }
+
+ "ui.bufferline"          = { fg = "gray", bg = "bg_alt" }
+ "ui.bufferline.active"   = { fg = "white", bg = "tab_active" }
+ "ui.bufferline.background" = { bg = "bg_alt" }
+
+ "ui.popup"               = { fg = "gray", bg = "bg_alt" }
+ "ui.popup.info"          = { fg = "gray", bg = "bg_alt" }
+ "ui.window"              = "border"
+ "ui.help"                = { fg = "gray", bg = "bg_alt" }
+ "ui.menu"                = { fg = "gray", bg = "bg_alt" }
+ "ui.menu.selected"       = { fg = "white", bg = "gold_dim" }
+ "ui.menu.scroll"         = { fg = "gold_mid", bg = "bg_alt" }
+ "ui.picker.header"       = { fg = "fg", modifiers = ["bold"] }
+
+ "ui.virtual.whitespace"  = "panel_border"
+ "ui.virtual.indent-guide" = "panel_border"
+ "ui.virtual.ruler"       = { bg = "tab_active" }
+ "ui.virtual.inlay-hint"  = "linenr"
+ "ui.virtual.jump-label"  = { fg = "cursor", modifiers = ["bold"] }
+
+ # ---------------------------------------------------------------- diagnostics
+ "error"                  = "red"
+ "warning"                = "yellow"
+ "info"                   = "type_light"
+ "hint"                   = "constant"
+ "diagnostic.error"       = { underline = { color = "red", style = "curl" } }
+ "diagnostic.warning"     = { underline = { color = "yellow", style = "curl" } }
+ "diagnostic.info"        = { underline = { color = "type_light", style = "curl" } }
+ "diagnostic.hint"        = { underline = { color = "constant", style = "curl" } }
+ "diagnostic.unnecessary" = { modifiers = ["dim"] }
+ "diagnostic.deprecated"  = { modifiers = ["crossed_out"] }
+
+ [palette]
+ bg           = "#031c1f"  # editor.background
+ bg_alt       = "#042327"  # tabs / suggest widget
+ tab_active   = "#093136"
+ border       = "#052c31"
+ fg           = "#bdb395"  # editor.foreground
+ white        = "#ffffff"
+ black        = "#000000"
+ gray         = "#cccccc"
+ gold         = "#b59e7a"
+ gold_dim     = "#4a5043"  # #b59e7a65 blended
+ gold_mid     = "#76705a"  # #b59e7aa4 blended
+ linenr       = "#4a5043"  # #b59e7a65 blended
+ panel_border = "#37423a"  # #b59e7a4b blended
+ match_hl     = "#38585b"  # #63878a8e blended
+ cursor       = "#86e08f"
+ sel_bg       = "#0000ff"
+ sel_fg       = "#e0dede"
+ comment      = "#31b72c"
+ keyword      = "#cccccc"
+ string       = "#2ca198"
+ constant     = "#70c5bf"
+ type_light   = "#b7cadd"
+ teal_light   = "#9de3c0"
+ red          = "#ff0000"
+ red_soft     = "#e06c6c"
+ yellow       = "#d8b25c"

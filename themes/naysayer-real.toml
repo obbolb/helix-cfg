@@ -1,0 +1,148 @@
+# naysayer_nvim  Helix port of naysayer.nvim by Rostislav Sobolevskiy,
+# # itself based on Nick Aversano's Emacs naysayer-theme.
+#
+# # ---------------------------------------------------------------- syntax
+ "comment"                  = "comment"
+
+ "keyword"                  = "keyword"
+ "keyword.control"          = "keyword"
+ "keyword.operator"         = "keyword"
+ "keyword.function"         = "keyword"
+ "keyword.storage"          = "keyword"
+ "keyword.directive"        = "macro"       # PreProc
+
+ "operator"                 = "text"
+ "punctuation"              = "text"
+ "punctuation.delimiter"    = "text"
+ "punctuation.bracket"      = "text"
+ "punctuation.special"      = "special"
+
+ "string"                   = "string"
+ "string.regexp"            = "special"
+ "string.special"           = "special"
+
+ "constant"                 = "constant"
+ "constant.builtin"         = "constant"
+ "constant.builtin.boolean" = "constant"
+ "constant.character"       = "string"
+ "constant.character.escape" = "special"
+ "constant.numeric"         = "number"
+
+ "type"                     = "type"
+ "type.builtin"             = "type"
+ "type.enum.variant"        = "constant"
+ "constructor"              = "type"
+
+ "function"                 = "function"
+ "function.method"          = "function"
+ "function.builtin"         = "function"
+ "function.macro"           = "macro"
+ "function.special"         = "macro"
+
+ "variable"                 = "variable"
+ "variable.parameter"       = "variable"
+ "variable.builtin"         = "keyword"
+ "variable.other.member"    = "variable"
+
+ "namespace"                = "text"
+ "label"                    = "text"
+ "special"                  = "special"
+ "tag"                      = "keyword"
+ "attribute"                = "macro"
+
+ # ---------------------------------------------------------------- markup
+ "markup.heading"           = { fg = "white", modifiers = ["bold"] }
+ "markup.bold"              = { modifiers = ["bold"] }
+ "markup.italic"            = { modifiers = ["italic"] }
+ "markup.strikethrough"     = { modifiers = ["crossed_out"] }
+ "markup.link.url"          = { fg = "string", modifiers = ["underlined"] }
+ "markup.link.text"         = "type"
+ "markup.list"              = "type"
+ "markup.quote"             = "comment"
+ "markup.raw"               = "string"
+
+ # ---------------------------------------------------------------- diff
+ "diff.plus"                = "comment"
+ "diff.minus"               = "red"
+ "diff.delta"               = "warning"
+
+ # ---------------------------------------------------------------- ui
+ "ui.background"            = { bg = "background" }
+ "ui.text"                  = "text"
+ "ui.text.focus"            = "white"
+ "ui.text.inactive"         = "line_fg"
+
+ "ui.cursor"                = { fg = "background", bg = "white" }
+ "ui.cursor.primary"        = { fg = "background", bg = "white" }
+ "ui.cursor.match"          = { bg = "selection" }          # MatchParen
+ "ui.cursorline.primary"    = { bg = "highlight" }
+
+ "ui.selection"             = { bg = "selection" }
+ "ui.selection.primary"     = { bg = "selection" }
+ "ui.highlight"             = { bg = "selection" }
+
+ "ui.linenr"                = "line_fg"
+ "ui.linenr.selected"       = "white"
+
+ "ui.statusline"            = { fg = "statusline_fg", bg = "statusline_bg" }
+ "ui.statusline.inactive"   = { fg = "line_fg", bg = "background" }
+ "ui.statusline.normal"     = { fg = "statusline_fg", bg = "statusline_bg", modifiers = ["bold"] }
+ "ui.statusline.insert"     = { fg = "statusline_fg", bg = "type", modifiers = ["bold"] }
+ "ui.statusline.select"     = { fg = "white", bg = "selection", modifiers = ["bold"] }
+
+ "ui.bufferline"            = { fg = "text", bg = "background" }
+ "ui.bufferline.active"     = { fg = "statusline_fg", bg = "statusline_bg" }
+ "ui.bufferline.background" = { bg = "background" }
+
+ "ui.popup"                 = { fg = "text", bg = "highlight" }
+ "ui.popup.info"            = { fg = "text", bg = "highlight" }
+ "ui.window"                = "line_fg"                    # VertSplit
+ "ui.help"                  = { fg = "text", bg = "highlight" }
+ "ui.menu"                  = { fg = "text", bg = "highlight" }
+ "ui.menu.selected"         = { fg = "white", bg = "line_fg" }
+ "ui.menu.scroll"           = { fg = "text", bg = "highlight" }
+ "ui.picker.header"         = { fg = "white", modifiers = ["bold"] }
+
+ "ui.virtual.whitespace"    = "highlight"
+ "ui.virtual.indent-guide"  = "highlight"
+ "ui.virtual.ruler"         = { bg = "highlight" }           # ColorColumn
+ "ui.virtual.inlay-hint"    = "line_fg"
+ "ui.virtual.jump-label"    = { fg = "warning", modifiers = ["bold"] }
+
+ # ---------------------------------------------------------------- diagnostics
+ "error"                    = "red"
+ "warning"                  = "warning"
+ "info"                     = "blue"
+ "hint"                     = "cyan"
+ "diagnostic.error"         = { underline = { color = "red", style = "curl" } }
+ "diagnostic.warning"       = { underline = { color = "warning", style = "curl" } }
+ "diagnostic.info"          = { underline = { color = "blue", style = "curl" } }
+ "diagnostic.hint"          = { underline = { color = "cyan", style = "curl" } }
+ "diagnostic.unnecessary"   = { modifiers = ["dim"] }
+ "diagnostic.deprecated"    = { modifiers = ["crossed_out"] }
+
+ [palette]
+ background    = "#062625"
+ text          = "#d0b892"
+ variable      = "#d0b892"
+ function      = "#d0b892"
+ selection     = "#0000ff"
+ comment       = "#53d549"
+ type          = "#8cde94"   # 'punctuation' in the nvim theme, used for Type
+ macro         = "#8cde94"
+ keyword       = "#ffffff"
+ white         = "#ffffff"
+ string        = "#3ad0b5"
+ constant      = "#87ffde"
+ number        = "#87ffde"
+ special       = "#fd971f"   # Special (orange)
+ warning       = "#ffaa00"
+ highlight     = "#0b3335"
+ line_fg       = "#126367"
+ statusline_fg = "#12251b"
+ statusline_bg = "#d3b58e"
+
+ # monokai accents (diagnostics)
+ red           = "#f92672"
+ blue          = "#66d9ef"
+ cyan          = "#a1efe4"
