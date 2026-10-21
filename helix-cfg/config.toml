@@ -1,8 +1,0 @@
-theme = "gruvbox-material"
-[editor]
-true-color = true
-auto-format = false
-
-[keys.normal]
-"esc" = "collapse_selection"
-
